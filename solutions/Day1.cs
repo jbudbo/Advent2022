@@ -4,20 +4,20 @@ using System.Text.RegularExpressions;
 
 namespace solutions;
 
-internal static partial class Day1 
+internal partial struct Day1 : IAdventDay<int>
 {
     private static readonly Regex splitter = GetSplitRegex();
 
-    internal static void Part1()
+    public int Part1()
     {
         Span<int> calorieData = GetCalorieList();
 
         calorieData.Sort();
 
-        Console.WriteLine($"Highest calorie carried is {calorieData[^1]}");
+        return calorieData[^1];
     }
 
-    internal static void Part2()
+    public int Part2()
     {
         Span<int> calorieData = GetCalorieList();
 
@@ -31,7 +31,7 @@ internal static partial class Day1
             topThreeTotal += Unsafe.Add(ref sumSpace, i);
         }
 
-        Console.WriteLine($"Sum of the top 3 highest calories carried is {topThreeTotal}");
+        return topThreeTotal;
     }
 
     private static int[] GetCalorieList()

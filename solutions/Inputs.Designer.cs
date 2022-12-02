@@ -158,5 +158,116 @@ namespace solutions {
                 return ResourceManager.GetString("Day1", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Y
+        ///A Y
+        ///B X
+        ///A Y
+        ///C Y
+        ///B Y
+        ///B Z
+        ///B Y
+        ///A X
+        ///B X
+        ///C Z
+        ///B Y
+        ///B Y
+        ///B Y
+        ///B Y
+        ///C X
+        ///A Z
+        ///B X
+        ///A Y
+        ///A Y
+        ///B Y
+        ///A X
+        ///C X
+        ///B Y
+        ///A Y
+        ///B Y
+        ///C X
+        ///A Z
+        ///B Y
+        ///A X
+        ///A Y
+        ///B Y
+        ///A Y
+        ///A X
+        ///B Y
+        ///B Y
+        ///B Y
+        ///B X
+        ///A X
+        ///C Y
+        ///A X
+        ///C Z
+        ///B Z
+        ///A Z
+        ///A Z
+        ///C X
+        ///A X
+        ///A X
+        ///B Y
+        ///B Y
+        ///C Y
+        ///B Y
+        ///B X
+        ///B Y
+        ///B Y
+        ///B X
+        ///C X
+        ///A X
+        ///A X
+        ///A Z
+        ///C X
+        ///A Z
+        ///A X
+        ///B Y
+        ///B Y
+        ///A Y
+        ///A Z
+        ///B Y
+        ///B X
+        ///B Y
+        ///B Y
+        ///B X
+        ///C Z
+        ///A X
+        ///B X
+        ///B X
+        ///A Y
+        ///B X
+        ///C Z
+        ///B Y
+        ///A X
+        ///C Z
+        ///A Y
+        ///B Y
+        ///B Y
+        ///A X
+        ///A Z
+        ///B Y
+        ///B Y
+        ///A Z
+        ///A Z
+        ///B Y
+        ///A X
+        ///A Z
+        ///C Y
+        ///A X
+        ///B Y
+        ///C X
+        ///A X
+        ///B Y
+        ///A X
+        ///A Z
+        ///C  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day2 {
+            get {
+                return ResourceManager.GetString("Day2", resourceCulture);
+            }
+        }
     }
 }
