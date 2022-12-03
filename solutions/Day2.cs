@@ -1,6 +1,6 @@
 ﻿namespace solutions;
 
-internal struct Day2 : IAdventDay<int>
+internal readonly struct Day2 : IAdventDay<int>
 {
     private static readonly Dictionary<char, Dictionary<char, int>> scoreMap = new(3)
     {
@@ -70,12 +70,12 @@ internal struct Day2 : IAdventDay<int>
         }
     };
 
-    public int Part1() => Inputs.Day2
+    public readonly int Part1() => Inputs.Day2
         .Split(Environment.NewLine, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
         .Select(static play => scoreMap[play[2]][play[0]])
         .Sum();
 
-    public int Part2() => Inputs.Day2
+    public readonly int Part2() => Inputs.Day2
         .Split(Environment.NewLine, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
         .Select(static play => playMap[play[2]][play[0]])
         .Sum();

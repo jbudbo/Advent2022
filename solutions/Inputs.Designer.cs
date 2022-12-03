@@ -269,5 +269,28 @@ namespace solutions {
                 return ResourceManager.GetString("Day2", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sfDRhjhHsHhgWPJvPmmQnmPqnW
+        ///pTddGVwcpMTTCdnQJqqQqqqVtVms
+        ///MdZCZGdcrCNRFZRhFssL
+        ///CttWnSnNfSnCHsWrTlTPPpPCTRrLpl
+        ///DgqqghjqJBVgDMTPGVlRGwbfLLGP
+        ///cgqBBhjqcBdMcWQcQNnNzsfv
+        ///lnDWMgTLlTFlHHgDDgngWFnlBWNcBQrdjcrrdQrPBrdjhWhj
+        ///JqSVRRVmmRqJJbZGGJqJvbmBNcjPNQNssQPhSSdwPwwwQr
+        ///bCRJqGJJmzmJZRCmFNTLTttTzfFfLglf
+        ///SPWvWMvCSPcjzjDbcwfjTl
+        ///lLNRNLqhhQVQJlRjrjrDwTzzqzzfrb
+        ///GRnRVhRJLFnnhtJQNVdLdLgWCmmZlMlgSCSWSgpZtPBM
+        ///pTGFrLFTFWFprLDBmLbSbtmBDb
+        ///MqjwqJwZlqJjHlqjHHPmSbsffDmsStDnHnQmsm
+        ///ZPJjVPZbVMRRPZwMJZVMNJMcGWpWFcWFFNFGrWTzWz [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Day3 {
+            get {
+                return ResourceManager.GetString("Day3", resourceCulture);
+            }
+        }
     }
 }

@@ -4,11 +4,11 @@ using System.Text.RegularExpressions;
 
 namespace solutions;
 
-internal partial struct Day1 : IAdventDay<int>
+internal readonly partial struct Day1 : IAdventDay<int>
 {
     private static readonly Regex splitter = GetSplitRegex();
 
-    public int Part1()
+    public readonly int Part1()
     {
         Span<int> calorieData = GetCalorieList();
 
@@ -17,7 +17,7 @@ internal partial struct Day1 : IAdventDay<int>
         return calorieData[^1];
     }
 
-    public int Part2()
+    public readonly int Part2()
     {
         Span<int> calorieData = GetCalorieList();
 
