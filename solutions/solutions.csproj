@@ -8,17 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="Inputs.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Inputs.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="Inputs.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Inputs.Designer.cs</LastGenOutput>
+      <Generator></Generator>
     </EmbeddedResource>
   </ItemGroup>
 

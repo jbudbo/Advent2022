@@ -1,12 +1,11 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
 
 namespace solutions;
 
-internal readonly partial struct Day1 : IAdventDay<int>
+internal readonly struct Day1 : IAdventDay<int>
 {
-    private static readonly Regex splitter = GetSplitRegex();
+    private static readonly IEnumerable<string> data = Data.For<Day1>("\r\n\r\n");
 
     public readonly int Part1()
     {
@@ -36,7 +35,7 @@ internal readonly partial struct Day1 : IAdventDay<int>
 
     private static int[] GetCalorieList()
     {
-        ReadOnlySpan<string> elveData = splitter.Split(Inputs.Day1);
+        ReadOnlySpan<string> elveData = data.ToArray();
         Span<int> calorieBuffer = stackalloc int[elveData.Length];
 
         ref string elfSearchSpace = ref MemoryMarshal.GetReference(elveData);
@@ -62,7 +61,4 @@ internal readonly partial struct Day1 : IAdventDay<int>
 
         return calorieBuffer.ToArray();
     }
-
-    [GeneratedRegex(@"(\r\n){2}")]
-    private static partial Regex GetSplitRegex();
 }

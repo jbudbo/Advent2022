@@ -2,6 +2,8 @@
 
 internal readonly struct Day2 : IAdventDay<int>
 {
+    private static readonly IEnumerable<string> data = Data.For<Day2>();
+
     private static readonly Dictionary<char, Dictionary<char, int>> scoreMap = new(3)
     {
         //  I throw Rock (1)
@@ -70,13 +72,11 @@ internal readonly struct Day2 : IAdventDay<int>
         }
     };
 
-    public readonly int Part1() => Inputs.Day2
-        .Split(Environment.NewLine, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+    public readonly int Part1() => data
         .Select(static play => scoreMap[play[2]][play[0]])
         .Sum();
 
-    public readonly int Part2() => Inputs.Day2
-        .Split(Environment.NewLine, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+    public readonly int Part2() => data
         .Select(static play => playMap[play[2]][play[0]])
         .Sum();
 }

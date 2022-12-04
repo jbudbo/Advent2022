@@ -6,8 +6,9 @@ internal readonly partial struct Day4 : IAdventDay<int>
 {
     private static readonly Regex parser = GetParserRegex();
 
-    public int Part1() => Inputs.Day4
-        .Split(Environment.NewLine, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+    private static readonly IEnumerable<string> data = Data.For<Day4>();
+
+    public int Part1() => data
         .Select(ToRangePair)
         .Where(static rp =>
         {
@@ -17,8 +18,7 @@ internal readonly partial struct Day4 : IAdventDay<int>
         })
         .Count();
 
-    public int Part2() => Inputs.Day4
-        .Split(Environment.NewLine, StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+    public int Part2() => data
         .Select(ToRangePair)
         .Where(static rp =>
         {

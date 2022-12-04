@@ -2,8 +2,9 @@
 
 internal readonly struct Day3 : IAdventDay<int>
 {
-    public readonly int Part1()=> Inputs.Day3
-        .Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+    private static readonly IEnumerable<string> data = Data.For<Day3>();
+
+    public readonly int Part1() => data
         .Select(static rucksack =>
         {
             int midpoint = rucksack.Length / 2;
@@ -15,8 +16,7 @@ internal readonly struct Day3 : IAdventDay<int>
         })
         .Sum();
 
-    public readonly int Part2() => Inputs.Day3
-        .Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+    public readonly int Part2() => data
         .Chunk(3)
         .Select(static group =>
         {
