@@ -1,11 +1,12 @@
 ﻿using solutions;
 
-ReportDaySolution(new Day1(), "Highest calorie carried is {0}", "Sum of the top 3 highest calories carried is {0}");
-
-ReportDaySolution(new Day2(), "Strategy Score {0}", "Goal Score {0}");
+ReportDaySolution(new Day4(), "The number of fully overlapping pairs {0}", "The numbe of any overlapping pairs {0}");
 
 ReportDaySolution(new Day3(), "The sum of item priorities is {0}", "The sum of group badges is {0}");
 
+ReportDaySolution(new Day2(), "Strategy Score {0}", "Goal Score {0}");
+
+ReportDaySolution(new Day1(), "Highest calorie carried is {0}", "Sum of the top 3 highest calories carried is {0}");
 
 static void ReportDaySolution<T>(IAdventDay<T> day, string part1Message, string part2Message)
 {
