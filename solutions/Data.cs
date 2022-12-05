@@ -7,7 +7,7 @@ internal static class Data
     private static readonly ResourceManager resourceManager
         = new ("solutions.Inputs", typeof(Data).Assembly);
 
-    internal static IEnumerable<string> For<T>(string? token = null)
+    internal static IEnumerable<string> For<T>(string? token = null, StringSplitOptions opts = StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
     {
         string resource = typeof(T).Name;
 
@@ -18,6 +18,6 @@ internal static class Data
 
         token ??= Environment.NewLine;
 
-        return data.Split(token, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+        return data.Split(token, opts);
     }
 }
