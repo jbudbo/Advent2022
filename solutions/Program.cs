@@ -1,6 +1,8 @@
 ﻿using solutions;
 
-ReportDaySolution(new Day5(), "Top containers consist of {0}", "Top containers consist of {0}");
+ReportDaySolution(new Day6(), "Processed elements before SoP {0}", "Processed elements before SoM {0}");
+
+//ReportDaySolution(new Day5(), "Top containers consist of {0}", "Top containers consist of {0}");
 
 //ReportDaySolution(new Day4(), "The number of fully overlapping pairs {0}", "The numbe of any overlapping pairs {0}");
 
