@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace solutions;
 
-internal readonly struct Day1 : IAdventDay<int>
+internal readonly struct Day1 : IAdventDay<int>, IAsyncAdventDay<int>
 {
     private static readonly IEnumerable<string> data = Data.For<Day1>("\r\n\r\n");
 
@@ -60,5 +60,19 @@ internal readonly struct Day1 : IAdventDay<int>
         }
 
         return calorieBuffer.ToArray();
+    }
+
+    public readonly async ValueTask<int> Part1Async()
+    {
+        await foreach(ReadOnlyMemory<char> line in Data.ForAsync<Day1>("\r\n\r\n"))
+        {
+
+        }
+        return 0;
+    }
+
+    ValueTask<int> IAsyncAdventDay<int>.Part2()
+    {
+        throw new NotImplementedException();
     }
 }

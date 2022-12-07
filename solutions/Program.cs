@@ -1,6 +1,10 @@
 ﻿using solutions;
 
-ReportDaySolution(new Day6(), "Processed elements before SoP {0}", "Processed elements before SoM {0}");
+//await new Day1().Part1Async();
+
+ReportDaySolution(new Day7(), "Sum of directories under 100,000 {0}", "Size of directory to remove {0}");
+
+//ReportDaySolution(new Day6(), "Processed elements before SoP {0}", "Processed elements before SoM {0}");
 
 //ReportDaySolution(new Day5(), "Top containers consist of {0}", "Top containers consist of {0}");
 
