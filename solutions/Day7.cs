@@ -1,5 +1,4 @@
 ﻿namespace solutions;
-
 internal readonly struct Day7 : IAdventDay<long>
 {
     private static readonly IEnumerable<string> data = Data.For<Day7>();
