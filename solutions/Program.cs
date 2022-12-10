@@ -3,7 +3,9 @@ using System.Diagnostics;
 
 //await new Day1().Part1Async();
 
-ReportDaySolution(new Day8(), "Trees visible from outside {0}");
+ReportDaySolution(new Day9(), "{0} unique tail positions");
+
+//ReportDaySolution(new Day8(), "Trees visible from outside {0}");
 
 //ReportDaySolution(new Day7(), "Sum of directories under 100,000 {0}", "Size of directory to remove {0}");
 

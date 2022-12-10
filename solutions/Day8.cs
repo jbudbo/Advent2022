@@ -1,7 +1,6 @@
 ﻿using System.Numerics;
 
 namespace solutions;
-
 internal readonly struct Day8 : IAdventDay<int>
 {
     private static readonly IEnumerable<string> data = Data.For<Day8>();
