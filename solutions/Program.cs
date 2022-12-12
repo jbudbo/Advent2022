@@ -3,7 +3,9 @@ using System.Diagnostics;
 
 //await new Day1().Part1Async();
 
-ReportDaySolution(new Day10(), "{0}", "DONE {0}");
+ReportDaySolution(new Day11(), "Monkey Business after 20 rounds: {0}", "Monkey Business after 10k rounds: {0}");
+
+//ReportDaySolution(new Day10(), "{0}", "DONE {0}");
 
 //ReportDaySolution(new Day9(), "{0} unique tail positions");
 

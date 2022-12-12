@@ -28,6 +28,16 @@ internal static class Data
         }
     }
 
+    internal static string Full<T>()
+    {
+        string file = $"Data/{typeof(T).Name}.dat";
+
+        if (!File.Exists(file))
+            return string.Empty;
+
+        return File.ReadAllText(file);
+    }
+
     internal static IEnumerable<string> For<T>(string? token = null
         , StringSplitOptions opts = StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
     {

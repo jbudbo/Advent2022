@@ -22,7 +22,7 @@ internal readonly struct Day10 : IAdventDay<int>
     {
         const int VERT = 40;
 
-        foreach (var (pixel, spriteCenter) in PlayState(data.ToArray()))
+        foreach (var (pixel, spriteCenter) in PlayState(data))
         {
             int xIndex = (pixel % VERT) - 1;
             bool lit = xIndex >= spriteCenter - 1 && xIndex <= spriteCenter + 1;
@@ -37,21 +37,25 @@ internal readonly struct Day10 : IAdventDay<int>
         return -1;
     }
 
-    internal IEnumerable<(int, int)> PlayState(string[] program)
+    internal IEnumerable<(int, int)> PlayState(IEnumerable<string> program)
     {
-        int l = program.Length, x = 1, instIndex = 0, tick = 0;
+        using var en = program.GetEnumerator();
 
-        while (instIndex < l)
+        int x = 1, instIndex = 0, tick = 0;
+
+        Span<string> buff;
+
+        while (en.MoveNext())
         {
-            string instr = program[instIndex];
+            buff = en.Current.Split();
 
-            switch (instr[..4])
+            switch (buff[0])
             {
                 case "noop":
                     yield return (++tick, x);
                     instIndex++;
                     break;
-                case "addx" when int.TryParse(instr[5..], out int val):
+                case "addx" when int.TryParse(buff[1], out int val):
                     yield return (++tick, x);
                     yield return (++tick, x);
                     x += val;
