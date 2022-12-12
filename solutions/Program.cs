@@ -3,7 +3,9 @@ using System.Diagnostics;
 
 //await new Day1().Part1Async();
 
-ReportDaySolution(new Day9(), "{0} unique tail positions");
+ReportDaySolution(new Day10(), "{0}", "DONE {0}");
+
+//ReportDaySolution(new Day9(), "{0} unique tail positions");
 
 //ReportDaySolution(new Day8(), "Trees visible from outside {0}");
 
